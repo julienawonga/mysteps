@@ -1,2 +1,2 @@
-# My first ntribution n github
+# My first contribution n github
 ###   
