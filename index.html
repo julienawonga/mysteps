@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       defer
@@ -24,7 +25,7 @@
     <title>MyStep</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav
         x-data="{ isOpen: false }"
         class="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6"
@@ -104,7 +105,7 @@
           class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8"
         >
           <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-            <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">
+            <h2 class="text-4xl text-white font-extrabold md:text-5xl">
               Marchez pour la santé, gagnez pour chaque pas avec My Steps!
             </h2>
             <p>
@@ -527,7 +528,7 @@
         ]
         }"
         >
-        <section class="py-14">
+        <!-- <section class="py-14">
         <div class="max-w-screen-xl mx-auto px-4 md:px-8">
         <div class="max-w-xl sm:text-center md:mx-auto">
         <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">
@@ -564,9 +565,9 @@
         </ul>
         </div>
         </div>
-        </section>
+        </section> -->
         </div>
-      <div class="border-b border-gray-300 my-4"></div>
+      
         <div
         x-data="{ team: [
         {
@@ -586,7 +587,7 @@
         },
         ] }"
         >
-        <section id="ourpartners">
+        <!-- <section id="ourpartners">
         <div class="py-14">
         <div class="max-w-screen-xl mx-auto px-4 md:px-8">
             <div class="max-w-xl mx-auto text-center">
@@ -673,7 +674,7 @@
             </div>
         </div>
         </div>
-        </section>
+        </section> -->
         <section id="ourteam" class="py-14">
         <div class="max-w-screen-xl mx-auto px-4 text-center md:px-8">
           <div class="max-w-xl mx-auto">
@@ -921,7 +922,7 @@
       ]
       }"
       >
-      <footer class="pt-10">
+      <footer class="pt-10" id="footer">
       <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
       <div class="justify-between sm:flex">
       <div class="space-y-6">
