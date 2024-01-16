@@ -33,7 +33,7 @@
     <title>MYSTEPS</title>
   </head>
   <body>
-    <header class="bg-[#00BF63]">
+    <header class="bg-[#00BF63] h-screen">
       <nav
         x-data="{ isOpen: false }"
         class="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6"
@@ -94,16 +94,16 @@
           <div
             class="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12"
           >
-            <li class="text-zinc-950 hover:text-white">
+            <li class="text-white hover:text-gray-500">
               <a href="javascript:void(0)">Telecharger</a>
             </li>
-            <li class="text-zinc-950 hover:text-white">
+            <li class="text-white hover:text-gray-500">
               <a href="#features">Découvrir</a>
             </li>
-            <li class="text-zinc-950 hover:text-white">
+            <li class="text-white hover:text-gray-500">
               <a href="#ourteam">L'equipe</a>
             </li>
-            <li class="text-zinc-950 hover:text-white">
+            <li class="text-white hover:text-gray-500">
               <a href="#faq">faqs</a>
             </li>
           </div>
@@ -696,7 +696,7 @@
                   </div>
                   <div class="mt-2">
                     <h4
-                      class="text-gray-600 font-semibold sm:text-lg"
+                      class="text-white font-semibold sm:text-lg"
                       x-text="item.name"
                     ></h4>
                     <p class="text-mystepbrand" x-text="item.title"></p>
@@ -831,7 +831,7 @@
               Besoin d'Aide ? Contactez-nous !
             </p>
             <p>
-              Nous sommes là pour répondre à toutes vos questions et vous accompagner. Nous attendons avec impatience de vous entendre ! N'hésitez pas à remplir le formulaire ci-dessous ou à utiliser les informations de contact fournies pour nous contacter
+              Nous sommes là pour répondre à toutes vos questions et vous accompagner. Nous attendons avec impatience de vous entendre ! N'hésitez pas à cliquez <span ><a href="https://form.typeform.com/to/PUlmxrRx" target="_blank" class="font-bold tracking-widest text-mystepbrand">ICI</a></span>  ou à utiliser les informations de contact fournies pour nous contacter
             </p>
             <div>
               <ul class="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
@@ -851,7 +851,7 @@
             </div>
           </div>
           <div class="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
-            <form @submit.prevent class="space-y-5">
+            <!-- <form @submit.prevent class="space-y-5">
               <div>
                 <label class="font-medium"> Nom Complet</label>
                 <input
@@ -888,7 +888,8 @@
               >
                 Envoyer
               </button>
-            </form>
+            </form> -->
+          
           </div>
         </div>
       </div>
