@@ -27,13 +27,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/jos-animation/0.9.2/jos.js"
-  integrity="sha512-ZbNmgrMmWwQspNz6WQ1HnqLEPMXE4PyJBVnuc10e4gwJhrycze2IzjDQPx4CxkOBnUyt5wNCekdeTRJOe8J4WA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jos-animation/0.9.2/jos.js"
+      integrity="sha512-ZbNmgrMmWwQspNz6WQ1HnqLEPMXE4PyJBVnuc10e4gwJhrycze2IzjDQPx4CxkOBnUyt5wNCekdeTRJOe8J4WA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
@@ -45,12 +49,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
- 
+
     <script>
-      JOS.init();
-       $(window).on("load",function(){
-          $(".loader-wrapper").fadeOut("slow");
-        });
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
       tailwind.config = {
         theme: {
           extend: {
@@ -127,7 +130,9 @@
           class="flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0"
         >
           <div
-            class="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12"
+            class="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12 jos"
+            data-jos_animation="flip-up"
+            data-jos_anchor="#hero"
           >
             <li class="text-white hover:text-gray-500">
               <a href="javascript:void(0)">Telecharger</a>
@@ -148,7 +153,13 @@
         <div
           class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8"
         >
-          <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+          <div
+            id="hero"
+            class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl jos"
+            data-jos_stagger="fade-up"
+            data-jos_stagger_seq="0.3"
+            data-jos_stagger_anchor="#hero"
+          >
             <h2 class="text-4xl text-white font-extrabold md:text-5xl">
               Marchez pour la santé, gagnez pour chaque pas avec My Steps!
             </h2>
@@ -459,10 +470,15 @@
               </a>
             </div>
           </div>
-          <div class="hidden mt-14 md:mt-0 md:max-w-xl lg:block">
+          <div
+            class="hidden mt-14 md:mt-0 md:max-w-xl lg:block jos"
+            data-jos_animation="zoom"
+            data-jos_duration="1.2"
+          >
             <img
               src="./assets/hero-image.jfif"
-              class="md:rounded-tl-[108px]"
+              class="md:rounded-tl-[108px] jos"
+              data-jos_animation="skew-up"
               alt=""
             />
           </div>
@@ -474,6 +490,9 @@
       <!-- <div class="border-b border-gray-300 my-4"></div>  -->
       <section
         id="features"
+        class="jos"
+        data-jos_animation="fade-left"
+        data-jos_scrolldirection="down"
         x-data="{ features: [
         {
           icon: `<i class='fa-solid fa-shoe-prints'></i>`,
@@ -517,9 +536,9 @@
               <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-2">
                 <template x-for="item in features" :key="item.title">
                   <li class="flex gap-x-4">
-                    <div class="jos" data-jos_animation="fade-up">
+                    <div>
                       <div
-                      class="flex-none w-12 h-12 bg-mystepbrand text-white rounded-lg flex items-center justify-center "
+                        class="flex-none w-12 h-12 bg-mystepbrand text-white rounded-lg flex items-center justify-center"
                         x-html="item.icon"
                       ></div>
                       <div class="space-y-3">
@@ -715,15 +734,27 @@
         <section id="ourteam" class="py-14 bg-[#4AE098]">
           <div class="max-w-screen-xl mx-auto px-4 text-center md:px-8">
             <div class="max-w-xl mx-auto">
-              <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              <h3
+                class="text-gray-800 text-3xl font-semibold sm:text-4xl jos"
+                data-jos_animation="fade"
+                data-jos_scrolldirection="down"
+              >
                 Rencontrez Notre Équipe
               </h3>
-              <p class="text-zinc-950 mt-3">
+              <p
+                class="text-zinc-950 mt-3 jos"
+                data-jos_animation="fade-up"
+                data-jos_scrolldirection="down"
+              >
                 Rencontrez notre équipe passionnée et dévouée qui travaille pour
                 rendre chaque pas significatif.
               </p>
             </div>
-            <div class="mt-12">
+            <div
+              class="mt-12 jos"
+              data-jos_animation="flip"
+              data-jos_scrolldirection="down"
+            >
               <ul
                 class="grid gap-8 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3"
               >
@@ -766,7 +797,12 @@
           id="faq"
           class="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8"
         >
-          <div class="space-y-3 text-center">
+          <div
+            class="space-y-3 text-center jos"
+            data-jos_stagger="fade"
+            data-jos_stagger_seq="0.2"
+            data-jos_stagger_scrolldirection="down"
+          >
             <h1 class="text-3xl text-gray-800 font-semibold">
               Questions Fréquentes sur My Steps
             </h1>
@@ -1314,3 +1350,28 @@
     </footer>
   </body>
 </html>
+
+<script>
+  JOS.init({
+    // disable: false, // Disable JOS gloabaly | Values :  'true', 'false'
+    debugMode: true, // Enable JOS debug mode | Values :  'true', 'false'
+    passive: false, // Set the passive option for the scroll event listener | Values :  'true', 'false'
+
+    once: false, // Disable JOS after first animation | Values :  'true', 'false' || Int : 0-1000
+    animation: "fade", // JOS global animation type | Values :  'fade', 'slide', 'zoom', 'flip', 'fade-right', 'fade-left', 'fade-up', 'fade-down', 'zoom-in-right', 'zoom-in-left', 'zoom-in-up', 'zoom-in-down', 'zoom-out-right', 'zoom-out-left', 'zoom-out-up', 'zoom-out-down', 'flip-right', 'flip-left', 'flip-up', 'flip-down, spin, revolve, stretch, "my-custom-animation"
+    // animationInverse: "static", // Set the animation type for the element when it is scrolled out of view | Values :  'fade', 'slide', 'zoom', 'flip', 'fade-right', 'fade-left', 'fade-up', 'fade-down', 'zoom-in-right', 'zoom-in-left', 'zoom-in-up', 'zoom-in-down', 'zoom-out-right', 'zoom-out-left', 'zoom-out-up', 'zoom-out-down', 'flip-right', 'flip-left', 'flip-up', 'flip-down, spin, revolve, stretch, "my-custom-animation"
+    timingFunction: "ease-in-out", // JOS global timing function | Values :  'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear', 'step-start', 'step-end', 'steps()', 'cubic-bezier()', 'my-custom-timing-function'
+    //mirror : false, // Set whether the element should animate back when scrolled out of view | Values :  'true', 'false'
+    threshold: 0, // Set gloabal the threshold for the element to be visible | Values :  0-1
+    delay: 0, // Set global the delay for the animation to start | Values :  0,1,2,3,4,5
+    duration: 0.7, // Set global the duration for the animation playback | Values :  flota : 0-1 & int : 0,1,2,3,4,5
+
+    // startVisible: "true", // Set whether the element should animate when the page is loaded | Values :  'true', 'false' || MS : 0-10000
+    // scrollDirection: "down", // Set the scroll direction for the element to be visible | Values :  'up', 'down', 'none'
+    // scrollProgressDisable: true // disable or enable scroll callback function | Values :  'true', 'false'
+    // intersectionRatio: 0.4, // Set the intersection ratio between which the element should be visible | Values :  0-1 (automaticaly set)
+    // rootMargin_top: "0%", // Set by which percent the element should animate out (Recommended value between 10% to -30%)
+    // rootMargin_bottom: "-50%", // Set by which percent the element should animate out (Recommended value between -10% to -60%)
+    rootMargin: "0% 0% 50% 0%", // Set the root margin for the element to be visible | Values :  _% _% _% _%  (automaticaly set)
+  });
+</script>
